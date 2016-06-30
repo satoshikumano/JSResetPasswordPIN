@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+    <script src="lib/KiiSDK.js"></script>
+    <script src="index.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <ons-navigator id="navigator" page="page1.html"></ons-navigator>
+    <ons-template id="page1.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">Request Reset</div>
+        </ons-toolbar>
+        <div style="text-align: center; margin-top: 30px;">
+          <p>
+          <ons-input id="user-identifier" modifier="underbar" placeholder="User Identifier" float></ons-input>
+          </p>
+          <p style="margin-top: 30px;">
+          <ons-button onclick="requestReset()">Request Reset</ons-button>
+          </p>
+        </div>
+
+      </ons-page>
+    </ons-template>
+
+    <ons-template id="page2.html">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left"><ons-back-button>Back</ons-back-button></div>
+          <div class="center">Complete Reset.</div>
+        </ons-toolbar>
+        <div style="text-align: center; margin-top: 30px;">
+          <p>
+          <ons-input id="pin-code" modifier="underbar" placeholder="PIN Code" float></ons-input>
+          </p>
+          <p style="margin-top: 30px;">
+          <p>
+            <ons-input id="new-password" modifier="underbar" placeholder="New Password" float></ons-input>
+          </p>
+          <ons-button onclick="completeReset()">Request Reset</ons-button>
+          </p>
+        </div>
+      </ons-page>
+    </ons-template>
+  </body>
+</html>
+<!-- vim:set ts=2 sts=2 sw=2 et: -->
