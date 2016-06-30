@@ -1,8 +1,13 @@
-// This is a JavaScript file
+// Replace appID, appKey and appSite values with your application's
+// created on developer.kii.com.
+var appID = "__appID";
+var appKey = "__appKey";
+var appSite = KiiSite.JP;
+
 ons.ready(function() {
-  Kii.initializeWithSite("cd704e66",
-    "cff7d016bc4da4da26807b71f720c84b",
-    "https://qa21.internal.kii.com/api", {});
+  Kii.initializeWithSite(appID,
+    appKey,
+    appSite, {});
   Kii.setLogging(true);
 });
 
