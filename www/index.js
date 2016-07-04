@@ -1,7 +1,7 @@
 // Replace appID, appKey and appSite values with your application's
 // created on developer.kii.com.
-var appID = "__appID";
-var appKey = "__appKey";
+var appID = "__app_id";
+var appKey = "__app_key";
 var appSite = KiiSite.JP;
 
 ons.ready(function() {
@@ -30,8 +30,6 @@ var completeReset = function() {
   console.log("completeReset");
   var pinCode = document.getElementById("pin-code").value;
   var newPassword = document.getElementById("new-password").value;
-  // FIXME: Not possible to use PHONE/ EMAIL for now.
-  userIdentifier = "0f2968a00022-5879-6e11-d6e3-0288cb07";
   KiiUser.completeResetPassword(userIdentifier, pinCode, newPassword).
   then(function() {
       ons.notification.alert('complete reset succeeded!');
